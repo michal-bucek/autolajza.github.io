@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Úvodní stránka</title>
+		<link rel="stylesheet" type="text/css" href="/resources/css/web.css"/>
+		<!--[if lt IE 9]>
+		<script src="/resources/js/html5shiv.js"></script>
+		<![endif]-->		
+		<script type="text/javascript" src="/resources/js/jquery.js"></script>
+		<!--
+		<script type="text/javascript" src="/resources/js/jquery.bxslider.js"></script>
+		<script type="text/javascript" src="/resources/js/jquery.bxslider.cs.js"></script>
+		-->
+		<script type="text/javascript" src="/resources/js/jquery.magnific-popup.js"></script>
+		<script type="text/javascript" src="/resources/js/jquery.magnific-popup.cs.js"></script>		
+	</head>
+	<body>
+		<div class="content">
+			<div class="top">
+				<div class="menu">
+					<a class="active" href="/">Úvodní stránka</a>
+					<!-- <a href="/cars">Nabídka vozů</a> -->
+					<a href="/other">Ostatní služby</a>
+					<a href="/about">O nás</a>
+				</div>
+			</div>
+			<div class="main">
+				<c:if test="${not empty content && content.active}">
+					<h1>AKCE - výkup za hotové + akční zprostředkovatelská provize</h1>
+					<div class="text">2% - vozidla nad 250 000,-Kč 3% - vozidla do 250 000,-Kč Nejméně však 2 479,-Kč. Uvedené sazby a částky jsou bez 21% DPH. Parkovné zdarma.</div>
+				</c:if>			
+				<h1>Tomáš Lajza - AUTO LAJZA - autobazar</h1>
+				<div class="text">Provozovna autobazaru: Voštice 103, 56601 Vysoké Mýto, tel: 603 294 824, 731 527 202</div>
+				<div class="images">
+					<a href="/resources/images/provozovna_vysoke_myto_1.JPG"><img class="image" src="/resources/images/provozovna_vysoke_myto_1.JPG" width="273"/></a>
+					<a href="/resources/images/provozovna_vysoke_myto_2.JPG"><img class="image" src="/resources/images/provozovna_vysoke_myto_2.JPG" width="273"/></a>
+					<a href="/resources/images/provozovna_vysoke_myto_3.JPG"><img class="image" src="/resources/images/provozovna_vysoke_myto_3.JPG" width="273"/></a>
+				</div>
+				<div class="clear"></div>			
+				<h1>Nabídka vozů</h1>
+				<div class="text">Naši nabídku naleznete zde:</div>
+				<table class="cars" cellspacing="0">
+					<tr>
+						<td>
+							<a class="logo tipcar" href="https://www.tipcars.com/ds/autolajza/" target="_blank">TipCar</a>
+						</td>
+						<td>
+							<a class="logo sauto" href="http://www.sauto.cz/detail-prodejce/auto-lajza/6076" target="_blank">sAuto</a>
+						</td>
+						<td>
+							<a class="logo annonce" href="http://www.annonce.cz/vsechny-inzeraty$18-filter.html?userId=3554&location_country=" target="_blank">Annonce</a>
+						</td>
+					</tr>
+				</table>
+				<!--
+				<h1>Naše tipy</h1>
+				<div class="slider">
+					<c:forEach var="car" items="${tips}">
+						<div class="slide">
+							<a href="/car/${car.id}">
+								<img src="${car.image.url}" width="700"/>
+							</a>
+							<div class="text">
+								<h2>${car.brand} - ${car.type}</h2>
+								<s:message code="car.price"/>: <f:formatNumber type="number" value="${car.price}"/> Kč, <s:message code="car.mileage"/>: <f:formatNumber type="number" value="${car.mileage}"/> km, <s:message code="car.usage"/>: ${car.usage}, <a href="/car/${car.id}">Více informací</a>
+							</div>
+						</div>
+					</c:forEach>
+				</div>
+				-->			
+				<img class="car" src="/resources/images/car_audi_tt.jpeg" width="865"/>
+			</div>
+			<div class="bottom">AutoLajza &copy;</div>
+		</div>
+	</body>
+</html>
